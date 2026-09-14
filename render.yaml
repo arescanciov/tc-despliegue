@@ -1,0 +1,14 @@
+services:
+  - type: web
+    name: titanic-api
+    runtime: python
+    plan: free
+    buildCommand: pip install -r requirements.txt
+    startCommand: uvicorn app:app --host 0.0.0.0 --port $PORT
+    envVars:
+      - key: PYTHON_VERSION
+        value: 3.11.9
+      # Ejemplo de cómo añadir variables de entorno propias en vez de
+      # escribirlas a fuego en el código (ver train_model.py / app.py):
+      # - key: MODEL_PATH
+      #   value: modelo_titanic.joblib

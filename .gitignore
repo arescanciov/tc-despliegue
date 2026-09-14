@@ -1,0 +1,15 @@
+# Python
+__pycache__/
+*.py[cod]
+*.egg-info/
+venv/
+.venv/
+
+# Variables de entorno locales (nunca se suben)
+.env
+
+# OS
+.DS_Store
+
+# Jupyter (por si se añaden notebooks de exploración)
+.ipynb_checkpoints/
